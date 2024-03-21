@@ -1,0 +1,38 @@
+{
+  "name": "rollup-test-vscode-extension",
+  "displayName": "rollup build vscode  extension",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "rollup --config rollup.config.ts --configPlugin typescript",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "helloworld",
+        "title": "Hello World (SolidJS): Show"
+      }
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/lodash": "^4.17.0",
+    "@types/node": "^20.11.30",
+    "@types/vscode": "^1.87.0",
+    "rollup": "^4.13.0",
+    "tslib": "^2.6.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
